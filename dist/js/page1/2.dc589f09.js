@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{283:function(e,n,p){"use strict";p.r(n);var t=p(120),a=p(119),o={components:{appHeader:t.a,appBody:a.a}},i=p(0),s=Object(i.a)(o,function(){var e=this.$createElement,n=this._self._c||e;return n("div",[n("app-header"),this._v(" "),n("app-body")],1)},[],!1,null,null,null);s.options.__file="editor.vue";n.default=s.exports}}]);
