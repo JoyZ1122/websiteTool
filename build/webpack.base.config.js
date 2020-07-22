@@ -20,7 +20,7 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
-
+    devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, `../dist/`),
         publicPath: "/dist/", //发布后在线访问的url

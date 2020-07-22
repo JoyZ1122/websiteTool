@@ -136,7 +136,7 @@ import previewDialog from "@/common/preview.vue";
 import pageOption from "@/config/page.config.js";
 // 组件默认配置
 import compConfig from "@/config/comp.config.js";
-
+import * as http from "@/api/api.js"
 export default {
   name: "AppMain",
   components: {
@@ -167,6 +167,10 @@ export default {
     };
   },
   mounted() {
+     http.getWebsiteList().then(res => {
+        console.log(233,res);
+       
+      });
     this.$bus.$on("click:show", (idx, tabs) => {
       this.click.index = idx;
       if (Array.isArray(tabs) && tabs.length) this.click.tabs = tabs;
@@ -222,7 +226,7 @@ export default {
       this.currentConfig = null;
     },
     savePageSet() {
-      // console.warn("save Info: ", JSON.stringify(this.compList));
+      console.warn("save Info: ", JSON.stringify(this.compList));
       
        this.$store.dispatch("fetchItem", this.compList);
        console.log(1212)
@@ -230,6 +234,14 @@ export default {
         message: "打开chomre devtool查看保存的信息！",
         type: "success"
       });
+      console.log(111)
+      const p={
+        id:'1',
+        config:JSON.stringify(this.compList)
+      }
+      http.saveWebsiteCofig(p).then(res=>{
+        console.log(res)
+      })
     },
     showPreview() {
       localStorage.setItem("pageConfig", JSON.stringify(this.pageConfig));

@@ -126,7 +126,7 @@ for (let pageName in router) {
     );
 }
 
-const port = 3000;
+const port = 3002;
 server.listen(port, () => {
     console.log(`server started at localhost:${port}`);
 });

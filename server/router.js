@@ -14,9 +14,9 @@ module.exports = {
         dir: "./src/pages/page2", //页面目录，默认有app.js作为入口
         title: "Page2", //生成html的title
     },
-    // page3: {
-    //     url: "/page1.html/editor", //访问的url规则，用于express的get
-    //     component: "../src/views/editor.vue",
-    //     title: "Page3", //生成html的title
-    // },
+    page3: {
+        url: "/page1.html/editor", //访问的url规则，用于express的get
+        component: "../src/views/editor.vue",
+        title: "Page3", //生成html的title
+    },
 };

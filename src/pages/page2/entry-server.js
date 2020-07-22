@@ -4,8 +4,6 @@
 import { createApp } from './app'
 import preview from './App.vue'
 export default context => {
-    console.log(123)
-
     return new Promise((resolve, reject) => {
         const { app, store } = createApp();
         preview.asyncData(store).then(() => {
